@@ -1,8 +1,14 @@
+import { ThemeProvider } from "styled-components";
+import PaginaPadrao from "./page";
+import Theme from "./theme";
+import EstilosGlobais from "./common/EstilosGlobais";
+
 function App() {
   return (
-    <>
-      Teste
-    </>
+    <ThemeProvider theme={Theme}>
+      <EstilosGlobais />
+      <PaginaPadrao />
+    </ThemeProvider>
   )
 }
 
