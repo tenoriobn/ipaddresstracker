@@ -1,27 +1,19 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Rastreador de Endereço IP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Design para desktop](./public/design/desktop-preview.jpg)
+![Design para mobile](./public/design/mobile-preview.jpg)
 
-Currently, two official plugins are available:
+## Bem-vindo! 👋
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Para completar este desafio, é necessário ter conhecimentos básicos de HTML, CSS e JavaScript.**
 
-## Expanding the ESLint configuration
+## O Desafio
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Meu desafio é construir este aplicativo IP Address Tracker e fazer com que pareça o mais próximo possível do design. Para obter os locais dos endereços IP, usarei a [API de geolocalização IP da IPify](https://geo.ipify.org/). Para gerar o mapa, optarei por usar [LeafletJS](https://leafletjs.com/).
 
-- Configure the top-level `parserOptions` property like this:
+Os usuários devem ser capazes de:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Ver o layout ideal para cada página, dependendo do tamanho da tela do dispositivo
+- Ver os estados de foco para todos os elementos interativos na página
+- Visualizar seu próprio endereço IP no mapa durante o carregamento inicial da página
+- Pesquisar quaisquer endereços IP ou domínios e ver as principais informações e localização
