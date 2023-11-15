@@ -6,7 +6,7 @@ const Theme = {
     white: '#ffffff',
   },
   font: {
-    rubik: 'Kumbh Sans, sans-serif',
+    rubik: 'Rubik, sans-serif',
   }
 }
 
