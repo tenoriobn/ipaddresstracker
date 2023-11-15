@@ -1,7 +1,9 @@
 const Theme = {
   colors: {
-    VeryDarkGray: '#2b2b2b',
-    DarkGray: '#969696',
+    black: '#000000',
+    darkGray: '#989898',
+    veryDarkGray: '#2E2E2E',
+    white: '#ffffff',
   },
   font: {
     rubik: 'Kumbh Sans, sans-serif',
