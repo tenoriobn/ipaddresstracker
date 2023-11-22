@@ -11,7 +11,11 @@ const ContainerCabecalho = styled.header`
   background-size: cover;
   background-repeat: no-repeat;
 
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+
+  @media (min-width: 375px) {
+    padding: 0 1.5rem;
+  }
 
   @media (min-width: 768px) {
     background-image: url(${fundoDesktop});

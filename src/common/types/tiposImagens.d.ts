@@ -3,4 +3,7 @@ declare module "*.png" {
   export default value;
 }
 
-
+declare module "*.svg?react" {
+  const value: string;
+  export default value;
+}
