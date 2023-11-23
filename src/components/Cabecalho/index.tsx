@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import fundoDesktop from "./backgroundDesktop.png";
 import fundoMobile from "./backgroundMobile.png";
-import Theme from "src/theme";
-import CampoUsuario from "./CampoUsuario";
+import Formulario from "./Formulario";
+import { cor } from "src/common/estilos/CorTema";
+import Cards from "./Cards";
 
 const ContainerCabecalho = styled.header`
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 
   background-image: url(${fundoMobile});
   background-size: cover;
   background-repeat: no-repeat;
+
+  box-sizing: border-box;
 
   padding: 0 1rem;
 
@@ -23,7 +27,7 @@ const ContainerCabecalho = styled.header`
 `;
 
 const Titulo = styled.h2`
-  color: ${Theme.colors.white};
+  color: ${cor.white};
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: .015rem;
@@ -37,11 +41,12 @@ const Titulo = styled.h2`
   }
 `
 
-export default function ConsultaIP() {
+export default function Cabecalho() {
   return (
     <ContainerCabecalho>
       <Titulo>IP Address Tracker</Titulo>
-      <CampoUsuario />
+      <Formulario />
+      <Cards />
     </ContainerCabecalho>
   )
 }

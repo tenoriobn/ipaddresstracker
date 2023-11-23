@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
 import theme from "src/theme";
-import ConsultaIP from "src/components/ConsultaIP";
-import MapaVisualizacao from "src/components/MapaVisualizacao";
+import Cabecalho from "src/components/Cabecalho";
+import Mapa from "src/components/Mapa";
 
 const Container = styled.div`
   display: grid;
@@ -18,8 +18,8 @@ export default function PaginaPadrao() {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <ConsultaIP />
-        <MapaVisualizacao />
+        <Cabecalho />
+        <Mapa />
       </Container>
     </ThemeProvider>
   )

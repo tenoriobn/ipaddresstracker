@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import mapa from "./prototipodomapa.png";
 
 const Conteudo = styled.main`
-  background-color: blue;
+  background-image: url(${mapa});
 `
 
-export default function MapaVisualizacao() {
+export default function Mapa() {
   return (
     <Conteudo>
-      MapaVisualizacao
+      <>.</>
     </Conteudo>
   )
 }

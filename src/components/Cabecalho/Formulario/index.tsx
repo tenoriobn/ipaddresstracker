@@ -1,10 +1,8 @@
-import Theme from "src/theme";
 import styled from "styled-components";
 import IconeSeta from "./icon-arrow.svg?react";
+import { cor } from "src/common/estilos/CorTema";
 
-const cor = Theme.colors;
-
-const ContainerFormulario = styled.div`
+const ContainerFormulario = styled.form`
   display: flex;
   justify-content: center;
 
@@ -23,7 +21,7 @@ const CampoEntrada = styled.input`
 
   cursor: pointer;
 
-  color: ${Theme.colors.veryDarkGray};
+  color: ${cor.veryDarkGray};
   font-size: 1rem;
 
   padding: 0 0 0 1rem;
@@ -35,7 +33,7 @@ const CampoEntrada = styled.input`
   width: 100%;
 
   &::placeholder {
-    color: ${Theme.colors.darkGray};
+    color: ${cor.darkGray};
   }
 
   @media (min-width: 375px) {
@@ -46,7 +44,7 @@ const CampoEntrada = styled.input`
 `;
 
 const BotaoPesquisa = styled.button`
-  background-color: ${Theme.colors.black};
+  background-color: ${cor.black};
   border: none;
   border-radius: 0 .875rem .875rem 0;
 
@@ -62,20 +60,19 @@ const BotaoPesquisa = styled.button`
   transition: background-color .25s ease-in-out;
 
   &:hover {
-    background-color: ${Theme.colors.veryDarkGray};
+    background-color: ${cor.veryDarkGray};
   }
 `
 
-export default function CampoUsuario() {
+export default function Formulario() {
   return (
-    <form>
+
       <ContainerFormulario>
         <CampoEntrada type="text" placeholder="Search for any IP address or domain" />
         <BotaoPesquisa type="submit">
           <IconeSeta />
         </BotaoPesquisa>
-        
       </ContainerFormulario>
-    </form>
+
   )
 }
