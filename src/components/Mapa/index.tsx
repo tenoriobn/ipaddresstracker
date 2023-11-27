@@ -12,3 +12,9 @@ export default function Mapa() {
     </Conteudo>
   )
 }
+
+/*
+  Observação:
+    Aqui deve ser renderizado o mapa gerado pela API `LeafletJS` que obtem as coordenadas de `IPify`.
+    Além disso, devo introduzir o icone de `Localização` na localização do IP.
+*/ 

@@ -1,8 +1,8 @@
 const Theme = {
   colors: {
-    black: '#000000',
-    darkGray: '#989898',
-    veryDarkGray: '#2E2E2E',
+    preto: '#000000',
+    cinzaMedio: '#989898',
+    cinzaEscuro: '#2E2E2E',
     white: '#ffffff',
   },
   font: {

@@ -6,29 +6,29 @@ const Article = styled.article`
   text-align: center;
   position: relative;
 
-  &::after {
-    content: "";
-
-    border-right: 1px solid ${cor.darkGray};
-
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-
-    height: 90%;
-  }
-
-  &:last-child::after {
-    display: none;
-  }
-
   @media (min-width: 992px) {
     text-align: left;
     padding: 0 2rem;
 
     max-width: 278px;
     width: 100%;
+
+    &::after {
+      content: "";
+
+      border-right: 1px solid ${cor.cinzaMedio};
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+
+      height: 90%;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -37,7 +37,7 @@ const Article = styled.article`
 `;
 
 const Titulo = styled.h2`
-  color: ${cor.darkGray};
+  color: ${cor.cinzaMedio};
   font-size: .625rem;
   font-weight: 500;
   letter-spacing: .1062rem;
@@ -54,7 +54,7 @@ const Titulo = styled.h2`
 `
 
 const Informacao = styled.h3`
-  color: ${cor.veryDarkGray};
+  color: ${cor.cinzaEscuro};
   font-size: 1.25rem;
   font-weight: 500;
   line-height: normal;
@@ -100,3 +100,9 @@ export default function Card() {
     </>
   )
 }
+
+/*
+  Observação:
+    Aqui será renderizado as informações obtidas na API `IPify` quando o usuário informar um IP.
+    (Lembrando que inicialmente as informações deve ser da API do usuário.)
+*/ 

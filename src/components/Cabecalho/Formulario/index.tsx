@@ -16,12 +16,12 @@ const ContainerFormulario = styled.form`
 const CampoEntrada = styled.input`
   border: none;
   border-radius: .875rem 0 0 .875rem;
-  box-shadow: -4px 6px 19px -15px ${cor.black};
+  box-shadow: -4px 6px 19px -15px ${cor.preto};
   box-sizing: border-box;
 
   cursor: pointer;
 
-  color: ${cor.veryDarkGray};
+  color: ${cor.cinzaEscuro};
   font-size: 1rem;
 
   padding: 0 0 0 1rem;
@@ -33,7 +33,7 @@ const CampoEntrada = styled.input`
   width: 100%;
 
   &::placeholder {
-    color: ${cor.darkGray};
+    color: ${cor.cinzaMedio};
   }
 
   @media (min-width: 375px) {
@@ -44,7 +44,7 @@ const CampoEntrada = styled.input`
 `;
 
 const BotaoPesquisa = styled.button`
-  background-color: ${cor.black};
+  background-color: ${cor.preto};
   border: none;
   border-radius: 0 .875rem .875rem 0;
 
@@ -60,19 +60,23 @@ const BotaoPesquisa = styled.button`
   transition: background-color .25s ease-in-out;
 
   &:hover {
-    background-color: ${cor.veryDarkGray};
+    background-color: ${cor.cinzaEscuro};
   }
 `
 
 export default function Formulario() {
   return (
-
       <ContainerFormulario>
         <CampoEntrada type="text" placeholder="Search for any IP address or domain" />
         <BotaoPesquisa type="submit">
           <IconeSeta />
         </BotaoPesquisa>
       </ContainerFormulario>
-
   )
 }
+
+/*
+  Observação:
+    O Campo de entrada deve ser preenchido automaticamente com o IP do usuário que está acessando o site;
+    Ao apagar o `IP` deixando o campo em branco, tem que aparecer a mensagem do placeholder.
+*/
