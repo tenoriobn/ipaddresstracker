@@ -105,4 +105,5 @@ export default function Card() {
   Observação:
     Aqui será renderizado as informações obtidas na API `IPify` quando o usuário informar um IP.
     (Lembrando que inicialmente as informações deve ser da API do usuário.)
+    Usar o axios para fazer a requisição no ipify
 */ 
