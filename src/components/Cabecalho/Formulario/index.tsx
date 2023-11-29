@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import IconeSeta from "./icon-arrow.svg?react";
 import { cor } from "src/common/estilos/CorTema";
-import { EstadoEnderecoIP } from "src/common/state";
+import { EstadoEnderecoIP } from "src/common/state/atom";
 import { useSetRecoilState } from "recoil";
 import usePesquisarIP from "src/common/state/hooks/usePesquisarIP";
+// import { useEffect } from "react";
 
 const ContainerFormulario = styled.form`
   display: flex;
@@ -70,6 +71,11 @@ const BotaoPesquisa = styled.button`
 export default function Formulario() {
   const setEnderecoIP = useSetRecoilState(EstadoEnderecoIP);
   const pesquisarIP = usePesquisarIP();
+
+  // useEffect(() => {
+  //   pesquisarIP(undefined); // Passando undefined para o evento
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
       <ContainerFormulario onSubmit={pesquisarIP}>

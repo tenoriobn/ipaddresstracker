@@ -1,4 +1,6 @@
+import { useRecoilValue } from "recoil";
 import { cor } from "src/common/estilos/CorTema";
+import { EstadoDadosIP } from "src/common/state/atom";
 import styled from "styled-components";
 
 const Article = styled.article`
@@ -65,33 +67,12 @@ const Informacao = styled.h3`
   }
 `
 
-const SimulacaoDados = [
-  {
-    "key": "1",
-    "titulo": "ip address",
-    "informacao": "192.212.174.101"
-  },
-  {
-    "key": "2",
-    "titulo": "location",
-    "informacao": "Brooklyn, NY 10001"
-  },
-  {
-    "key": "3",
-    "titulo": "timezone",
-    "informacao": "UTC-05:00"
-  },
-  {
-    "key": "4",
-    "titulo": "isp",
-    "informacao": "SpaceX Starlink"
-  }
-];
-
 export default function Card() {
+  const dadosIP = useRecoilValue(EstadoDadosIP);
+
   return (
     <>
-      {SimulacaoDados.map((dado) => (
+      {dadosIP.map((dado) => (
         <Article key={dado.key}>
           <Titulo>{dado.titulo}</Titulo>
           <Informacao>{dado.informacao}</Informacao>
