@@ -21,6 +21,8 @@ const ContainerCards = styled.section`
   max-width: 556px;
   width: 100%;
 
+  z-index: 2;
+
   @media (min-width: 992px) {
     flex-direction: row;
     gap: 0px;
