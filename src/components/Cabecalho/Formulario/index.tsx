@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import IconeSeta from "./icon-arrow.svg?react";
 import { cor } from "src/common/estilos/CorTema";
-import { EstadoEnderecoIP } from "src/common/state/atom";
+import { estadoEnderecoIP } from "src/common/state/atom";
 import { useSetRecoilState } from "recoil";
 import usePesquisarIP from "src/common/state/hooks/usePesquisarIP";
 import { useEffect } from "react";
@@ -69,7 +69,7 @@ const BotaoPesquisa = styled.button`
 `
 
 export default function Formulario() {
-  const setEnderecoIP = useSetRecoilState(EstadoEnderecoIP);
+  const setEnderecoIP = useSetRecoilState(estadoEnderecoIP);
   const pesquisarIP = usePesquisarIP();
 
   useEffect(() => {

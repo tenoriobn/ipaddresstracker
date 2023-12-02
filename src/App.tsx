@@ -5,6 +5,7 @@ import EstilosGlobais from "./common/EstilosGlobais";
 import { RecoilRoot } from "recoil";
 
 function App() {
+
   return (
     <ThemeProvider theme={Theme}>
       <RecoilRoot>

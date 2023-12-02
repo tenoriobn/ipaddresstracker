@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil";
 import { cor } from "src/common/estilos/CorTema";
-import { EstadoDadosIP } from "src/common/state/atom";
+import { estadoDadosIP } from "src/common/state/atom";
 import styled from "styled-components";
 
 const Article = styled.article`
@@ -68,7 +68,7 @@ const Informacao = styled.h3`
 `
 
 export default function Card() {
-  const dadosIP = useRecoilValue(EstadoDadosIP);
+  const dadosIP = useRecoilValue(estadoDadosIP);
 
   return (
     <>

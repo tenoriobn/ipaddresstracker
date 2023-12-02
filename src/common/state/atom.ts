@@ -1,12 +1,18 @@
 import { atom } from "recoil";
 import { ICardDados } from "../interfaces/ICardDados";
+import { ICoordenadas } from "../interfaces/ICoordenadas";
 
-export const EstadoEnderecoIP = atom({
+export const estadoEnderecoIP = atom({
   key: 'enderecoIP',
   default: '',
 });
 
-export const EstadoDadosIP = atom<ICardDados[]>({
+export const estadoDadosIP = atom<ICardDados[]>({
   key: 'dadosIP',
   default: [],
+});
+
+export const estadoCoordenadasMapa = atom<ICoordenadas>({
+  key: 'coordenadasMapa',
+  default: { lat: 0 , lng: 0 },
 });
