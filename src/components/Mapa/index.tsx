@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { MapContainer, Marker,  TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import { estadoCoordenadasMapa } from "src/common/state/atom";
 import { useRecoilValue } from "recoil";
-import { useEffect, useState } from "react";
+import { MapContainer, Marker,  TileLayer } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { estadoCoordenadasMapa } from "src/common/state/atom/atom";
+import useAtualizarMapa from "src/common/state/hooks/useAtualizarMapa";
+import iconeMarcador from "./marcador.png";
 
 const Conteudo = styled.main`
   position: relative;
@@ -19,13 +21,13 @@ const Conteudo = styled.main`
   }
 `
 
-export default function Mapa() {
-  const [mapaAtualizado, setMapaAtualizado] = useState(0);
-  const coordenadas = useRecoilValue(estadoCoordenadasMapa);
+const iconeMarcadorCustomizado = L.icon({
+  iconUrl: iconeMarcador,
+})
 
-  useEffect(() => {
-    setMapaAtualizado(prevKey => prevKey + 1);
-  }, [coordenadas]);
+export default function Mapa() {
+  const coordenadas = useRecoilValue(estadoCoordenadasMapa);
+  const mapaAtualizado = useAtualizarMapa();
 
   return (
     <Conteudo key={mapaAtualizado}>
@@ -34,15 +36,12 @@ export default function Mapa() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[coordenadas.lat, coordenadas.lng]}>
+        <Marker 
+          position={[coordenadas.lat, coordenadas.lng]} 
+          icon={iconeMarcadorCustomizado}
+        >
         </Marker>
       </MapContainer>
     </Conteudo>
   )
 }
-
-/*
-  Observação:
-    Aqui deve ser renderizado o mapa gerado pela API `LeafletJS` que obtem as coordenadas de `IPify`.
-    Além disso, devo introduzir o icone de `Localização` na localização do IP.
-*/ 

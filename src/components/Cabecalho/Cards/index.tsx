@@ -1,4 +1,4 @@
-import { cor } from "src/common/estilos/CorTema";
+import { cor } from "src/common/EstilosGlobais/cores";
 import styled from "styled-components";
 import Card from "./Card";
 
@@ -10,7 +10,7 @@ const ContainerCards = styled.section`
   flex-direction: column;
   gap: 1.5rem;
 
-  background-color: ${cor.white};
+  background-color: ${cor.branco};
   border-radius: .875rem;
 
   margin-top: 1.5rem;

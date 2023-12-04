@@ -1,6 +1,6 @@
 import { useRecoilValue } from "recoil";
-import { cor } from "src/common/estilos/CorTema";
-import { estadoDadosIP } from "src/common/state/atom";
+import { cor } from "src/common/EstilosGlobais/cores";
+import { estadoDadosIP } from "src/common/state/atom/atom";
 import styled from "styled-components";
 
 const Article = styled.article`
@@ -81,10 +81,3 @@ export default function Card() {
     </>
   )
 }
-
-/*
-  Observação:
-    Aqui será renderizado as informações obtidas na API `IPify` quando o usuário informar um IP.
-    (Lembrando que inicialmente as informações deve ser da API do usuário.)
-    Usar o axios para fazer a requisição no ipify
-*/ 

@@ -1,6 +1,6 @@
 import { atom } from "recoil";
-import { ICardDados } from "../interfaces/ICardDados";
-import { ICoordenadas } from "../interfaces/ICoordenadas";
+import { ICardDados } from "../../interfaces/ICardDados";
+import { ICoordenadas } from "../../interfaces/ICoordenadas";
 
 export const estadoEnderecoIP = atom({
   key: 'enderecoIP',

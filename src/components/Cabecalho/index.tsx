@@ -2,7 +2,7 @@ import styled from "styled-components";
 import fundoDesktop from "./backgroundDesktop.png";
 import fundoMobile from "./backgroundMobile.png";
 import Formulario from "./Formulario";
-import { cor } from "src/common/estilos/CorTema";
+import { cor } from "src/common/EstilosGlobais/cores";
 import Cards from "./Cards";
 
 const ContainerCabecalho = styled.header`
@@ -27,7 +27,7 @@ const ContainerCabecalho = styled.header`
 `;
 
 const Titulo = styled.h2`
-  color: ${cor.white};
+  color: ${cor.branco};
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: .015rem;

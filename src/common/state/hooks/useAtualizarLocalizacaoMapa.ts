@@ -1,6 +1,6 @@
 import { useSetRecoilState } from "recoil";
 import { IDadosIP } from "src/common/interfaces/IDadosIP"
-import { estadoCoordenadasMapa } from "../atom";
+import { estadoCoordenadasMapa } from "../atom/atom";
 
 const useAtualizarLocalizacaoMapa = () => {
   const setCoordenadasMapa = useSetRecoilState(estadoCoordenadasMapa);

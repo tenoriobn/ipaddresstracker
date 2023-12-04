@@ -3,7 +3,7 @@ const Theme = {
     preto: '#000000',
     cinzaMedio: '#989898',
     cinzaEscuro: '#2E2E2E',
-    white: '#ffffff',
+    branco: '#ffffff',
   },
   font: {
     rubik: 'Rubik, sans-serif',

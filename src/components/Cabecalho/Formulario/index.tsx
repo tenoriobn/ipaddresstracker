@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import IconeSeta from "./icon-arrow.svg?react";
-import { cor } from "src/common/estilos/CorTema";
-import { estadoEnderecoIP } from "src/common/state/atom";
+import { cor } from "src/common/EstilosGlobais/cores";
+import { estadoEnderecoIP } from "src/common/state/atom/atom";
 import { useSetRecoilState } from "recoil";
 import usePesquisarIP from "src/common/state/hooks/usePesquisarIP";
-import { useEffect } from "react";
 
 const ContainerFormulario = styled.form`
   display: flex;
@@ -72,11 +71,6 @@ export default function Formulario() {
   const setEnderecoIP = useSetRecoilState(estadoEnderecoIP);
   const pesquisarIP = usePesquisarIP();
 
-  useEffect(() => {
-    pesquisarIP();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
       <ContainerFormulario onSubmit={pesquisarIP}>
         <CampoEntrada 
@@ -95,9 +89,5 @@ export default function Formulario() {
 
 /*
   Observação:
-    O Campo de entrada deve ser preenchido automaticamente com o IP do usuário que está acessando o site;
-    Ao apagar o `IP` deixando o campo em branco, tem que aparecer a mensagem do placeholder.
-
-
     *Aplicar condições de validação*
 */

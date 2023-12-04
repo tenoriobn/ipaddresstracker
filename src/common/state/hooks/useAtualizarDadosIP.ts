@@ -1,5 +1,5 @@
 import { useSetRecoilState } from "recoil";
-import { estadoDadosIP } from "../atom";
+import { estadoDadosIP } from "../atom/atom";
 import { IDadosIP } from "src/common/interfaces/IDadosIP";
 
 const useAtualizarDadosIP = () => {

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { estadoEnderecoIP } from "../atom";
+import { estadoEnderecoIP } from "../atom/atom";
 import { useRecoilValue } from "recoil";
 import useAtualizarDadosIP from "./useAtualizarDadosIP";
 import useAtualizarLocalizacaoMapa from "./useAtualizarLocalizacaoMapa";
