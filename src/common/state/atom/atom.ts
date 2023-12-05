@@ -16,3 +16,8 @@ export const estadoCoordenadasMapa = atom<ICoordenadas>({
   key: 'coordenadasMapa',
   default: { lat: 0 , lng: 0 },
 });
+
+export const estadoIPValidado = atom({
+  key: 'ipValidado',
+  default: true,
+});

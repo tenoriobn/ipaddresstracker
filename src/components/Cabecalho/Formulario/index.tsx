@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import IconeSeta from "./icon-arrow.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
-import { estadoEnderecoIP } from "src/common/state/atom/atom";
-import { useSetRecoilState } from "recoil";
-import usePesquisarIP from "src/common/state/hooks/usePesquisarIP";
+import { estadoEnderecoIP, estadoIPValidado } from "src/common/state/atom/atom";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import useValidadorIP from "src/common/state/hooks/useValidadorIP";
+import { estiloValidacaoProps } from "src/common/interfaces/IEstiloValidacaoProps";
 
 const ContainerFormulario = styled.form`
   display: flex;
@@ -14,10 +15,10 @@ const ContainerFormulario = styled.form`
   @media (min-width: 768px) {
     margin-top: 1.75rem;
   }
-`
+`;
 
-const CampoEntrada = styled.input`
-  border: none;
+const CampoEntrada = styled.input<estiloValidacaoProps>`
+  border: ${(props) => (props.$ipValidado ? `none` : `.0625rem solid ${cor.vermelho}`)};
   border-radius: .875rem 0 0 .875rem;
   box-shadow: -4px 6px 19px -15px ${cor.preto};
   box-sizing: border-box;
@@ -46,8 +47,9 @@ const CampoEntrada = styled.input`
   }
 `;
 
-const BotaoPesquisa = styled.button`
-  background-color: ${cor.preto};
+const BotaoPesquisa = styled.button<estiloValidacaoProps>`
+  background-color: ${(props) => (props.$ipValidado ? `${cor.preto}` : `${cor.vermelho}`)};
+
   border: none;
   border-radius: 0 .875rem .875rem 0;
 
@@ -63,31 +65,30 @@ const BotaoPesquisa = styled.button`
   transition: background-color .25s ease-in-out;
 
   &:hover {
-    background-color: ${cor.cinzaEscuro};
+    background-color: ${(props) => (props.$ipValidado ? `${cor.cinzaEscuro}` : `${cor.vermelho}`)};
   }
 `
 
 export default function Formulario() {
   const setEnderecoIP = useSetRecoilState(estadoEnderecoIP);
-  const pesquisarIP = usePesquisarIP();
+  const validarIP = useValidadorIP();
+
+  const ipValidado = useRecoilValue(estadoIPValidado);
 
   return (
-      <ContainerFormulario onSubmit={pesquisarIP}>
+      <ContainerFormulario onSubmit={validarIP}>
         <CampoEntrada 
           type="text" 
           placeholder="Search for any IP address or domain" 
           onChange={evento => setEnderecoIP(evento.target.value)}
+          $ipValidado={ipValidado}
         />
         <BotaoPesquisa 
           type="submit"
+          $ipValidado={ipValidado}
         >
           <IconeSeta />
         </BotaoPesquisa>
       </ContainerFormulario>
   )
 }
-
-/*
-  Observação:
-    *Aplicar condições de validação*
-*/
