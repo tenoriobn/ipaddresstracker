@@ -53,7 +53,7 @@ const Titulo = styled.h2`
     letter-spacing: .1275rem;
     margin-bottom: .75rem;
   }
-`
+`;
 
 const Informacao = styled.h3`
   color: ${cor.cinzaEscuro};
@@ -65,7 +65,7 @@ const Informacao = styled.h3`
     font-size: 1.625rem;
     letter-spacing: -0.0163rem;
   }
-`
+`;
 
 export default function Card() {
   const dadosIP = useRecoilValue(estadoDadosIP);
@@ -79,5 +79,5 @@ export default function Card() {
         </Article>
       ))}
     </>
-  )
+  );
 }

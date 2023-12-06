@@ -1,5 +1,5 @@
 import { useSetRecoilState } from "recoil";
-import { IDadosIP } from "src/common/interfaces/IDadosIP"
+import { IDadosIP } from "src/common/interfaces/IDadosIP";
 import { estadoCoordenadasMapa } from "../atom/atom";
 
 const useAtualizarLocalizacaoMapa = () => {
@@ -8,8 +8,8 @@ const useAtualizarLocalizacaoMapa = () => {
   return (data: IDadosIP) => {
     const { location } = data;
 
-    setCoordenadasMapa(location)
-  }
-}
+    setCoordenadasMapa(location);
+  };
+};
 
 export default useAtualizarLocalizacaoMapa;

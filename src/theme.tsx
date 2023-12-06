@@ -9,6 +9,6 @@ const Theme = {
   font: {
     rubik: 'Rubik, sans-serif',
   }
-}
+};
 
 export default Theme;

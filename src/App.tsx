@@ -13,7 +13,7 @@ function App() {
         <PaginaPadrao />
       </RecoilRoot>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -67,7 +67,15 @@ const BotaoPesquisa = styled.button<estiloValidacaoProps>`
   &:hover {
     background-color: ${(props) => (props.$ipValidado ? `${cor.cinzaEscuro}` : `${cor.vermelho}`)};
   }
-`
+`;
+
+const MensagemErro = styled.p`
+  color: ${cor.vermelho};
+  font-size: 14px;
+  text-align: center;
+
+  margin-top: .375rem;
+`;
 
 export default function Formulario() {
   const setEnderecoIP = useSetRecoilState(estadoEnderecoIP);
@@ -76,7 +84,9 @@ export default function Formulario() {
   const ipValidado = useRecoilValue(estadoIPValidado);
 
   return (
+    <>
       <ContainerFormulario onSubmit={validarIP}>
+
         <CampoEntrada 
           type="text" 
           placeholder="Search for any IP address or domain" 
@@ -90,5 +100,10 @@ export default function Formulario() {
           <IconeSeta />
         </BotaoPesquisa>
       </ContainerFormulario>
-  )
+
+      {ipValidado ? '' : 
+        <MensagemErro>Insira um endereço IP válido com pontos.</MensagemErro>
+      }
+    </>
+  );
 }

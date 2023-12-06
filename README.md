@@ -17,3 +17,5 @@ Os usuários devem ser capazes de:
 - Ver os estados de foco para todos os elementos interativos na página
 - Visualizar seu próprio endereço IP no mapa durante o carregamento inicial da página
 - Pesquisar quaisquer endereços IP ou domínios e ver as principais informações e localização
+
+ℹ️ **Aviso**: A pesquisa de endereço IP pode falhar devido ao limite de 1000 acessos da API utilizada neste projeto. Este é um projeto pessoal e utiliza o plano gratuito da API, limitado a 1000 acessos. Periodicamente, estarei atualizando a chave da API para garantir mais acessos.

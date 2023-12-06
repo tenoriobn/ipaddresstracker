@@ -19,11 +19,11 @@ const Conteudo = styled.main`
   .leaflet-control-zoom {
     display: none;
   }
-`
+`;
 
 const iconeMarcadorCustomizado = L.icon({
   iconUrl: iconeMarcador,
-})
+});
 
 export default function Mapa() {
   const coordenadas = useRecoilValue(estadoCoordenadasMapa);
@@ -43,5 +43,5 @@ export default function Mapa() {
         </Marker>
       </MapContainer>
     </Conteudo>
-  )
+  );
 }

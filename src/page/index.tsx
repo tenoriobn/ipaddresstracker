@@ -25,5 +25,5 @@ export default function PaginaPadrao() {
         <Mapa />
       </Container>
     </ThemeProvider>
-  )
+  );
 }

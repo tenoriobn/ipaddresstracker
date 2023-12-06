@@ -39,7 +39,7 @@ const Titulo = styled.h2`
     font-size: 2rem;
     letter-spacing: -0.06rem;
   }
-`
+`;
 
 export default function Cabecalho() {
   return (
@@ -48,5 +48,5 @@ export default function Cabecalho() {
       <Formulario />
       <Cards />
     </ContainerCabecalho>
-  )
+  );
 }

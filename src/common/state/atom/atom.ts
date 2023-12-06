@@ -9,7 +9,12 @@ export const estadoEnderecoIP = atom({
 
 export const estadoDadosIP = atom<ICardDados[]>({
   key: 'dadosIP',
-  default: [],
+  default: [
+    { key: "1", titulo: "ip address", informacao: "Loading..." },
+    { key: "2", titulo: "location", informacao: "Loading..." },
+    { key: "3", titulo: "timezone", informacao: "Loading..." },
+    { key: "4", titulo: "isp", informacao: "Loading..." }
+  ],
 });
 
 export const estadoCoordenadasMapa = atom<ICoordenadas>({

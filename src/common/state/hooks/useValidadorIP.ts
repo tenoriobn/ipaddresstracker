@@ -9,16 +9,15 @@ const useValidadorIP = () => {
   const setIPValidado = useSetRecoilState(estadoIPValidado);
   const pesquisarIP = usePesquisarIP();
 
-
   return (evento?: React.FormEvent<HTMLFormElement>) => {
     evento ? evento.preventDefault() : null;
 
-    setIPValidado(enderecoIPValido)
+    setIPValidado(enderecoIPValido);
 
     if (enderecoIPValido) {
       pesquisarIP();
     }
-  }
-}
+  };
+};
 
 export default useValidadorIP;

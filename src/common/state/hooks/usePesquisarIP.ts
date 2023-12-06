@@ -23,11 +23,9 @@ const usePesquisarIP = () => {
       const { data } = resposta;
 
       atualizarDadosIP(data);
-      atualizarLocalizacaoMapa(data)
-    }).catch(erro => {
-      console.error('Erro ao obter o endereço IP: ', erro);
+      atualizarLocalizacaoMapa(data);
     });
-  }
+  };
 };
 
 export default usePesquisarIP;

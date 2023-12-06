@@ -9,6 +9,6 @@ body {
   min-height: 100vh;
 }
 
-`
+`;
 
 export default EstilosGlobais;
