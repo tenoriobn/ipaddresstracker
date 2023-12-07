@@ -55,6 +55,10 @@ const BotaoPesquisa = styled.button<estiloValidacaoProps>`
 
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0;
   outline: none;
 
