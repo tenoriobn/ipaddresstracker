@@ -85,7 +85,10 @@ export default function Formulario() {
 
   return (
     <>
-      <ContainerFormulario onSubmit={validarIP}>
+      <ContainerFormulario 
+        onSubmit={validarIP}
+        aria-label="Enter form field and to search IP"
+      >
 
         <CampoEntrada 
           type="text" 
@@ -96,13 +99,14 @@ export default function Formulario() {
         <BotaoPesquisa 
           type="submit"
           $ipValidado={ipValidado}
+          aria-label="Button to search the IP"
         >
           <IconeSeta />
         </BotaoPesquisa>
       </ContainerFormulario>
 
       {ipValidado ? '' : 
-        <MensagemErro>Insira um endereço IP válido com pontos.</MensagemErro>
+        <MensagemErro>Enter a valid IP address with dots.</MensagemErro>
       }
     </>
   );
