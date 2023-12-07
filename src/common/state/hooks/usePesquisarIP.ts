@@ -16,7 +16,7 @@ const usePesquisarIP = () => {
 
     axios.get("https://geo.ipify.org/api/v2/country,city,vpn", {
       params: {
-        apiKey: 'at_Tu0BnnIdWA74nZYSjtGevqhQ4bUdA',
+        apiKey: 'at_VGrH2aTrZbHoIsOHhEbxBL8WuYYzI',
         ipAddress: enderecoIP
       }
     }).then(resposta => {

@@ -5,7 +5,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { estadoCoordenadasMapa } from "src/common/state/atom/atom";
 import useAtualizarMapa from "src/common/state/hooks/useAtualizarMapa";
-import iconeMarcador from "./marcador.png";
+import iconeMarcador from "./icon-location.svg";
 
 const Conteudo = styled.main`
   position: relative;
